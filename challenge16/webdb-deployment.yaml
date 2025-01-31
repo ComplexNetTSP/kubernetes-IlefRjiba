@@ -29,7 +29,7 @@ spec:
             memory: "200Mi"
         env:
         - name: MONGO_URL
-          value: "mongodb-service.irjiba.svc.cluster.local:27017"
+          value: "mongodb://mongo-0.mongodb-service.irjiba.svc.cluster.local:27017,mongo-1.mongodb-service.irjiba.svc.cluster.local:27017,mongo-2.mongodb-service.irjiba.svc.cluster.local:27017/?replicaSet=rs0"
         livenessProbe:
           httpGet:
             path: /
